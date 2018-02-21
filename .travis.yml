@@ -10,5 +10,7 @@ install:
 script:
 - nuget restore Platformer2D/Platforms/Linux/Platformer2D.csproj -PackagesDirectory packages/
 - nuget restore NeonShooter/Platforms/Linux/NeonShooter.csproj -PackagesDirectory packages/
+- nuget restore SpaceWar/Platforms/Linux/SpaceWar.csproj -PackagesDirectory packages/
 - msbuild Platformer2D/Platforms/Linux/Platformer2D.csproj /p:Configuration=Release /v:d /t:Build
 - msbuild NeonShooter/Platforms/Linux/NeonShooter.csproj /p:Configuration=Release /v:d /t:Build
+- msbuild SpaceWar/Platforms/Linux/SpaceWar.csproj /p:Configuration=Release /v:d /t:Build
