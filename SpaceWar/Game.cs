@@ -147,7 +147,7 @@ namespace Spacewar
             this.graphics = new Microsoft.Xna.Framework.GraphicsDeviceManager(this);
             this.graphics.PreferredBackBufferWidth = preferredWindowWidth;
             this.graphics.PreferredBackBufferHeight = preferredWindowHeight;
-            this.graphics.IsFullScreen = true;
+            this.graphics.IsFullScreen = false;
 
             // Game should run as fast as possible.
             IsFixedTimeStep = false;
