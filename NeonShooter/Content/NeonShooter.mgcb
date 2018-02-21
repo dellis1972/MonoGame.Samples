@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-
+/reference:../../packages/InfinitespaceStudios.Pipeline.1.0.9/tools/InfinitespaceStudios.Pipeline.dll
 #---------------------------------- Content ---------------------------------#
 
 #begin Art/Black Hole.png
@@ -229,19 +229,28 @@
 
 #begin Shaders/BloomCombine.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
+/processorParam:RemoteAddress=pipeline.infinitespace-studios.co.uk
+/processorParam:RemotePort=443
+/processorParam:Protocol=https
 /processorParam:DebugMode=Auto
 /build:Shaders/BloomCombine.fx
 
 #begin Shaders/BloomExtract.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
+/processorParam:RemoteAddress=pipeline.infinitespace-studios.co.uk
+/processorParam:RemotePort=443
+/processorParam:Protocol=https
 /processorParam:DebugMode=Auto
 /build:Shaders/BloomExtract.fx
 
 #begin Shaders/GaussianBlur.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
+/processorParam:RemoteAddress=pipeline.infinitespace-studios.co.uk
+/processorParam:RemotePort=443
+/processorParam:Protocol=https
 /processorParam:DebugMode=Auto
 /build:Shaders/GaussianBlur.fx
 

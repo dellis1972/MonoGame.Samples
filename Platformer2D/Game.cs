@@ -67,7 +67,7 @@ namespace Platformer2D
 #if WINDOWS_PHONE
             TargetElapsedTime = TimeSpan.FromTicks(333333);
 #endif
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
 
             //graphics.PreferredBackBufferWidth = 800;
             //graphics.PreferredBackBufferHeight = 480;
@@ -268,9 +268,10 @@ namespace Platformer2D
                 Vector2 statusSize = new Vector2(status.Width, status.Height);
                 spriteBatch.Draw(status, center - statusSize / 2, Color.White);
             }
-
+#if MOBILE
             if (touchState.IsConnected)
                 virtualGamePad.Draw(spriteBatch);
+#endif
         }
 
         private void DrawShadowedString(SpriteFont font, string value, Vector2 position, Color color)
