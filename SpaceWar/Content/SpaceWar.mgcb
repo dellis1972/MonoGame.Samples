@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-
+/reference:../../packages/InfinitespaceStudios.Pipeline.1.0.9/tools/InfinitespaceStudios.Pipeline.dll
 #---------------------------------- Content ---------------------------------#
 
 #begin Models/asteroid1.x
@@ -452,31 +452,31 @@
 
 #begin Shaders/backdrop.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
 /processorParam:DebugMode=Auto
 /build:Shaders/backdrop.fx
 
 #begin Shaders/ship.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
 /processorParam:DebugMode=Auto
 /build:Shaders/ship.fx
 
 #begin Shaders/simple.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
 /processorParam:DebugMode=Auto
 /build:Shaders/simple.fx
 
 #begin Shaders/simplescreen.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
 /processorParam:DebugMode=Auto
 /build:Shaders/simplescreen.fx
 
 #begin Shaders/sun.fx
 /importer:EffectImporter
-/processor:EffectProcessor
+/processor:RemoteEffectProcessor
 /processorParam:DebugMode=Auto
 /build:Shaders/sun.fx
 
