@@ -14,9 +14,10 @@ script:
 - mkdir ~/.wine
 - WINEPREFIX=~/.wine wineboot -i
 - find ~/.wine
-- mkdir ~/.wine/drive_c/Program Files\ (x86)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/
+- mkdir ~/.wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/
 - wget https://www.dropbox.com/s/u0yi77w62cfzi4y/XactInterop3.zip?dl=1 -O foo.zip
 - unzip -o foo.zip -d ~/.wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/
+- wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/XactBld3.exe
 #- nuget restore Platformer2D/Platforms/Linux/Platformer2D.csproj -PackagesDirectory packages/
 #- nuget restore NeonShooter/Platforms/Linux/NeonShooter.csproj -PackagesDirectory packages/
 #- nuget restore SpaceWar/Platforms/Linux/SpaceWar.csproj -PackagesDirectory packages/
