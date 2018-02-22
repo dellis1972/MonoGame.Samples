@@ -8,15 +8,18 @@ before_install:
   - brew update
   - brew install wine
 install:
-- wget -O MonoGame.pkg "http://teamcity.monogame.net/guestAuth/repository/download/MonoGame_PackageMacAndLinux/.lastSuccessful/MonoGame.pkg?branch_MonoGame=%3Cdefault%3E"
-- sudo installer -pkg "MonoGame.pkg" -target /
+#- wget -O MonoGame.pkg "http://teamcity.monogame.net/guestAuth/repository/download/MonoGame_PackageMacAndLinux/.lastSuccessful/MonoGame.pkg?branch_MonoGame=%3Cdefault%3E"
+#- sudo installer -pkg "MonoGame.pkg" -target /
 script:
 - mkdir ~/.wine
 - WINEPREFIX=~/.wine wineboot -i
 - find ~/.wine
-- nuget restore Platformer2D/Platforms/Linux/Platformer2D.csproj -PackagesDirectory packages/
-- nuget restore NeonShooter/Platforms/Linux/NeonShooter.csproj -PackagesDirectory packages/
-- nuget restore SpaceWar/Platforms/Linux/SpaceWar.csproj -PackagesDirectory packages/
-- msbuild Platformer2D/Platforms/Linux/Platformer2D.csproj /p:Configuration=Release /v:d /t:Build
-- msbuild NeonShooter/Platforms/Linux/NeonShooter.csproj /p:Configuration=Release /v:d /t:Build
-- msbuild SpaceWar/Platforms/Linux/SpaceWar.csproj /p:Configuration=Release /v:d /t:Build
+- mkdir ~/.wine/drive_c/Program Files\ (x86)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/
+- wget https://www.dropbox.com/s/u0yi77w62cfzi4y/XactInterop3.zip?dl=1 -O foo.zip
+- unzip -o foo.zip -d ~/.wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ XNA/XNA\ Game\ Studio/v4.0/Tools/
+#- nuget restore Platformer2D/Platforms/Linux/Platformer2D.csproj -PackagesDirectory packages/
+#- nuget restore NeonShooter/Platforms/Linux/NeonShooter.csproj -PackagesDirectory packages/
+#- nuget restore SpaceWar/Platforms/Linux/SpaceWar.csproj -PackagesDirectory packages/
+#- msbuild Platformer2D/Platforms/Linux/Platformer2D.csproj /p:Configuration=Release /v:d /t:Build
+#- msbuild NeonShooter/Platforms/Linux/NeonShooter.csproj /p:Configuration=Release /v:d /t:Build
+#- msbuild SpaceWar/Platforms/Linux/SpaceWar.csproj /p:Configuration=Release /v:d /t:Build
